@@ -1,0 +1,18 @@
+/* Footer styles */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  
+  .text {
+    margin: 0;
+  }
+  

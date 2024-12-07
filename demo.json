@@ -1,0 +1,164 @@
+{
+    "tasks": [
+        {
+            "id": 1,
+            "title": "Morning Exercise",
+            "start_time": "6:00 AM",
+            "end_time": "7:00 AM",
+            "priority": 4,
+            "task_status": "Pending"
+        },
+        {
+            "id": 2,
+            "title": "Breakfast",
+            "start_time": "7:30 AM",
+            "end_time": "8:00 AM",
+            "priority": 2,
+            "task_status": "Pending"
+        },
+        {
+            "id": 3,
+            "title": "Team Meeting",
+            "start_time": "9:00 AM",
+            "end_time": "10:00 AM",
+            "priority": 5,
+            "task_status": "Pending"
+        },
+        {
+            "id": 4,
+            "title": "Project Work",
+            "start_time": "10:15 AM",
+            "end_time": "12:30 PM",
+            "priority": 5,
+            "task_status": "Pending"
+        },
+        {
+            "id": 5,
+            "title": "Lunch Break",
+            "start_time": "1:00 PM",
+            "end_time": "1:30 PM",
+            "priority": 2,
+            "task_status": "Pending"
+        },
+        {
+            "id": 6,
+            "title": "Research New Tools",
+            "start_time": "2:00 PM",
+            "end_time": "3:00 PM",
+            "priority": 4,
+            "task_status": "Pending"
+        },
+        {
+            "id": 7,
+            "title": "Coffee Break",
+            "start_time": "3:15 PM",
+            "end_time": "3:30 PM",
+            "priority": 1,
+            "task_status": "Pending"
+        },
+        {
+            "id": 8,
+            "title": "Complete Documentation",
+            "start_time": "3:45 PM",
+            "end_time": "5:00 PM",
+            "priority": 5,
+            "task_status": "Pending"
+        },
+        {
+            "id": 9,
+            "title": "Evening Walk",
+            "start_time": "6:00 PM",
+            "end_time": "6:45 PM",
+            "priority": 3,
+            "task_status": "Pending"
+        },
+        {
+            "id": 10,
+            "title": "Dinner",
+            "start_time": "7:30 PM",
+            "end_time": "8:00 PM",
+            "priority": 2,
+            "task_status": "Pending"
+        },
+        {
+            "id": 11,
+            "title": "Watch Educational Video",
+            "start_time": "8:30 PM",
+            "end_time": "9:00 PM",
+            "priority": 3,
+            "task_status": "Pending"
+        },
+        {
+            "id": 12,
+            "title": "Plan Next Day Tasks",
+            "start_time": "9:15 PM",
+            "end_time": "9:45 PM",
+            "priority": 4,
+            "task_status": "Pending"
+        },
+        {
+            "id": 13,
+            "title": "Read Book",
+            "start_time": "10:00 PM",
+            "end_time": "10:30 PM",
+            "priority": 3,
+            "task_status": "Pending"
+        },
+        {
+            "id": 14,
+            "title": "Sleep",
+            "start_time": "11:00 PM",
+            "end_time": "6:00 AM",
+            "priority": 5,
+            "task_status": "Pending"
+        },
+        {
+            "id": 15,
+            "title": "Grocery Shopping",
+            "start_time": "11:00 AM",
+            "end_time": "11:45 AM",
+            "priority": 3,
+            "task_status": "Finished"
+        },
+        {
+            "id": 16,
+            "title": "Respond to Emails",
+            "start_time": "12:00 PM",
+            "end_time": "12:30 PM",
+            "priority": 4,
+            "task_status": "Finished"
+        },
+        {
+            "id": 17,
+            "title": "Client Follow-Up",
+            "start_time": "4:00 PM",
+            "end_time": "4:30 PM",
+            "priority": 5,
+            "task_status": "Finished"
+        },
+        {
+            "id": 18,
+            "title": "Fitness Goal Check",
+            "start_time": "5:15 PM",
+            "end_time": "5:45 PM",
+            "priority": 3,
+            "task_status": "Finished"
+        },
+        {
+            "id": 19,
+            "title": "Organize Workspace",
+            "start_time": "6:45 PM",
+            "end_time": "7:15 PM",
+            "priority": 4,
+            "task_status": "Finished"
+        },
+        {
+            "id": 20,
+            "title": "Family Call",
+            "start_time": "7:15 PM",
+            "end_time": "7:30 PM",
+            "priority": 3,
+            "task_status": "Finished"
+        }
+    ]
+}
