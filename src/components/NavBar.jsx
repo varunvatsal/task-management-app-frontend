@@ -3,11 +3,19 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import style from '../css/navbar.module.css'
 import { Link } from 'react-router-dom'
 import Cookies from 'js-cookie'
+import axios from 'axios'
 const NavBar = () => {
     let navigate = useNavigate()
 
     let handleSignOut = () => {
         Cookies.remove('accessToken')
+        axios.post('https://task-management-app-backend-version2.vercel.app/todoApp/getAllTodos', {withCredentials: true})
+        .then((response) => {
+          console.log(response)
+        })
+        .catch((error) => {
+          console.log(error)
+        })
         navigate('/login')
     }
   return (
