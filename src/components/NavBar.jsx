@@ -8,7 +8,7 @@ const NavBar = () => {
     let navigate = useNavigate()
 
     let handleSignOut = () => {
-        Cookies.remove('accessToken')
+        // Cookies.remove('accessToken')
         axios.post('https://task-management-app-backend-version2.vercel.app/todoApp/getAllTodos', {withCredentials: true})
         .then((response) => {
           console.log(response)

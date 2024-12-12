@@ -24,8 +24,8 @@ const Login = () => {
         axios.post(url, requestBody, {withCredentials: true})
         .then((response) => {
             console.log(response)
-            let accessToken = response.data.data.accessToken
-            Cookies.set('accessToken', accessToken)
+            // let accessToken = response.data.data.accessToken
+            // Cookies.set('accessToken', accessToken)
             navigate('/dashboard')
         })
         .catch((error) => {
