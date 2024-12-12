@@ -37,8 +37,8 @@ const DashBoard = () => {
           <h2 className={styles.subheading}>Summary</h2>
           <div className={styles.summary}>
             <h3>Total Tasks: {totalTask}</h3>
-            <h3>Task Completed: {(taskCompleted / totalTask) * 100}%</h3>
-            <h3>Task Pending: {(taskPending / totalTask) * 100}%</h3>
+            <h3>Task Completed: {((taskCompleted / totalTask) * 100).toFixed(2)}%</h3>
+            <h3>Task Pending: {((taskPending / totalTask) * 100).toFixed(2)}%</h3>
             <h3>
               Average Time per Completed Task:{" "}
               {taskCompleted > 0
