@@ -26,7 +26,7 @@ const DashBoard = () => {
     })
     .catch((error) => {
       console.log(error)
-      // navigate('/unauthorizedReq')
+      navigate('/unauthorizedReq')
     })
   }, [])
 
