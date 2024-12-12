@@ -10,15 +10,14 @@ const TaskList = () => {
   let [todoList, setTodoList] = useState([])
 
   let fetchData = () => {
-    axios.get('http://localhost:3000/todoApp/getAllTodos', {withCredentials: true})
+    axios.get('https://task-management-app-backend-version2.vercel.app/todoApp/getAllTodos', {withCredentials: true})
     .then((response) => {
       // console.log(response)
       setTodoList(response.data.data.todos)
     })
     .catch((error) => {
-      if(error.response.data.message === "Unauthorized request"){
-        navigate('/unauthorizedReq')
-      }
+      console.log(error)
+      navigate('/unauthorizedReq')
     })
   }
 
@@ -28,7 +27,7 @@ const TaskList = () => {
 
   let handleDelete = async (id) => {
     console.log("delete called")
-    axios.delete(`http://localhost:3000/todoApp/deleteTodo/${id}`,{withCredentials: true})
+    axios.delete(`https://task-management-app-backend-version2.vercel.app/todoApp/deleteTodo/${id}`,{withCredentials: true})
     fetchData()
   }
 
@@ -51,8 +50,8 @@ const TaskList = () => {
               {todoList.map(todo => (
                 <tr key={todo._id}>
                   <td>{todo.title}</td>
-                  <td>{new Date(todo.startTime).toString()}</td>
-                  <td>{new Date(todo.endTime).toString()}</td>
+                  <td>{new Date(todo.startTime).toUTCString()}</td>
+                  <td>{new Date(todo.endTime).toUTCString()}</td>
                   <td>{todo.priority}</td>
                   <td>{todo.status}</td>
                   <td>

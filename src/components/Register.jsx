@@ -16,7 +16,7 @@ const Register = () => {
     let handleSubmit = (e) => {
         e.preventDefault()
         let requestBody = {email, password}
-        let url = 'http://localhost:3000/todoApp/register'
+        let url = 'https://task-management-app-backend-version2.vercel.app/todoApp/register'
         axios.post(url, requestBody)
         .then((response) => {
             console.log(response)

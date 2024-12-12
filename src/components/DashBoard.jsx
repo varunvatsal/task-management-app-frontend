@@ -1,7 +1,10 @@
 import axios from 'axios'
 import React, { Fragment, useEffect, useState } from 'react'
 import styles from '../css/dashBoard.module.css'
+import { useNavigate } from 'react-router-dom'
 const DashBoard = () => {
+
+  let navigate = useNavigate()
 
   let [todoSummary, setTodoSummary] = useState({
       totalTask: 0,
@@ -16,17 +19,16 @@ const DashBoard = () => {
   let {totalTask, taskCompleted, taskPending, totalTimeOfCompletedTask, totalTimeLapsedForPendingTask, estimatedTimeToFinishPendingTask, priorityWiseSummary} = todoSummary
   
   useEffect(() => {
-    axios.get('http://localhost:3000/todoApp/getStatistic', {withCredentials: true})
+    axios.get('https://task-management-app-backend-version2.vercel.app/todoApp/getStatistic', {withCredentials: true})
     .then((response) => {
       console.log(response)
       setTodoSummary(response.data.data)
     })
     .catch((error) => {
       console.log(error)
+      // navigate('/unauthorizedReq')
     })
   }, [])
-
-  console.log(new Date(Date.now()))
 
   return (
     <>
@@ -50,7 +52,7 @@ const DashBoard = () => {
             <h3>Pending Tasks: {taskPending}</h3>
             <h3>Total Time Lapsed: {totalTimeLapsedForPendingTask.toFixed()}</h3>
             <h3>
-              Estimated Time to Finish: {estimatedTimeToFinishPendingTask.toFixed()} hrs
+              Estimated Time to Finish: {estimatedTimeToFinishPendingTask.toFixed(1)} hrs
             </h3>
           </div>
           <div className={styles.tableContainer}>
@@ -72,8 +74,8 @@ const DashBoard = () => {
                         <td>{index + 1}</td>
                         <td>{ele.completedTask}</td>
                         <td>{ele.pendingTask}</td>
-                        <td>{ele.timeLapsed.toFixed(2)}</td>
-                        <td>{ele.timeTofinish.toFixed(2)}</td>
+                        <td>{ele.timeLapsed.toFixed(1)}</td>
+                        <td>{ele.timeTofinish.toFixed(1)}</td>
                       </tr>
                     </Fragment>
                   );

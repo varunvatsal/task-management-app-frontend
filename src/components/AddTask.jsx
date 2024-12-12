@@ -21,7 +21,7 @@ const AddTask = () => {
         let {title, startTime, endTime, status, priority} = todo
         startTime = startTime + ":00.000Z"
         endTime = endTime + ":00.000Z"
-        axios.post('http://localhost:3000/todoApp/insertTodo', {title, startTime, endTime, status, priority}, {withCredentials: true})
+        axios.post('https://task-management-app-backend-version2.vercel.app/todoApp/insertTodo', {title, startTime, endTime, status, priority}, {withCredentials: true})
         .then((response) => {
             console.log(response)
         })

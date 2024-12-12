@@ -17,7 +17,7 @@ const EditTask = () => {
     let {title, startTime, endTime, status, priority} = todo
 
     let fetchTodo = () => {
-        axios.get(`http://localhost:3000/todoApp/getTodo/${id}`, {withCredentials: true})
+        axios.get(`https://task-management-app-backend-version2.vercel.app/todoApp/getTodo/${id}`, {withCredentials: true})
         .then((response) => {
             console.log(response)
             let todo = response.data.data.todo
@@ -44,7 +44,7 @@ const EditTask = () => {
         endTime = endTime + ":00.000Z"
         console.log(startTime)
         console.log(endTime)
-        axios.put('http://localhost:3000/todoApp/updateTodo', {id, title, startTime, endTime, status, priority}, {withCredentials: true})
+        axios.put('https://task-management-app-backend-version2.vercel.app/todoApp/updateTodo', {id, title, startTime, endTime, status, priority}, {withCredentials: true})
         .then((response) => {
             console.log(response)
         })
