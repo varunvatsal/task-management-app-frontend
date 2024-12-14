@@ -23,7 +23,7 @@ const TaskList = () => {
 
   useEffect(() => {
       fetchData()
-  })
+  }, [])
 
   let handleDelete = async (id) => {
     console.log("delete called")
