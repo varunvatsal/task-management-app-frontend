@@ -24,11 +24,12 @@ const AddTask = () => {
         axios.post('https://task-management-app-backend-version2.vercel.app/todoApp/insertTodo', {title, startTime, endTime, status, priority}, {withCredentials: true})
         .then((response) => {
             console.log(response)
+            navigate('/tasklist')
         })
         .catch((error) => {
             console.log(error)
+            alert("theres been an issue in adding your task, please try again")
         })
-        navigate('/tasklist')
     }
 
     let handleChange = (e) => {
