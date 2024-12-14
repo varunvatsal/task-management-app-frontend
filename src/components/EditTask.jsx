@@ -47,11 +47,12 @@ const EditTask = () => {
         axios.put('https://task-management-app-backend-version2.vercel.app/todoApp/updateTodo', {id, title, startTime, endTime, status, priority}, {withCredentials: true})
         .then((response) => {
             console.log(response)
+            navigate('/tasklist')
         })
         .catch((error) => {
             console.log(error)
+            alert("theres been an error in updating your task, please try again")
         })
-        navigate('/tasklist')
     }
 
     let handleChange = (e) => {
