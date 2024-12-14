@@ -28,7 +28,13 @@ const TaskList = () => {
   let handleDelete = async (id) => {
     console.log("delete called")
     axios.delete(`https://task-management-app-backend-version2.vercel.app/todoApp/deleteTodo/${id}`,{withCredentials: true})
-    fetchData()
+    .then(() => {
+      fetchData()
+    })
+    .catch((error) => {
+      console.log("delete task error", error)
+      alert("theres been issue in deleting your task, please try again")
+    })
   }
 
   return (
